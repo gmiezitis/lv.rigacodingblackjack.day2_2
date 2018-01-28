@@ -9,6 +9,19 @@ package data;
  *
  * @author oscar
  */
-public class Dealer implements Participant {
+public class Dealer extends Player {
+    
+    public Dealer(){
+        super();
+    }
+    @Override
+    public void giveCard(Card card) {
+        System.out.println("Dealer get card ");
+        hand.addCard(card);
+    }
+    @Override
+    public boolean isInGame(){
+        return hand.countPoints() < 17;
+    }
     
 }
