@@ -31,10 +31,10 @@ package data;
 
     @Override
     public boolean isInGame() {
-        System.out.println("You have " + getTotalPoints() + " points");
+        System.out.println("You have " + getTotalPoints() + " points.");
         
         if(getTotalPoints() > 21 ){
-            return false;
+            return false;   
         }
         
        return Game.getAnswer("More cards (y/n)?");

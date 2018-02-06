@@ -5,6 +5,8 @@
  */
 package data;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 /**
  *
  * @author oscar
@@ -21,7 +23,9 @@ public class Dealer extends Player {
     }
     @Override
     public boolean isInGame(){
-        return hand.countPoints() < 17;
+        int max = ThreadLocalRandom.current().nextInt(17, 20);
+        
+        return hand.countPoints() < max;
     }
     
 }
