@@ -17,7 +17,14 @@ public class CardImage extends JLabel {
     
     
     public CardImage(Card card){
-        String cardName = card.getFullName() + ".png";
+        String cardName;
+        
+        if(card.isBlind){
+            cardName = "00.png";
+        }else{
+            cardName = card.getFullName() + ".png";
+            
+        }
         this.setIcon(new ImageIcon(getClass().getResource("/images/" + cardName)));
          
     }

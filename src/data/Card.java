@@ -15,6 +15,8 @@ public class Card {
     //masts Hearts , Spades, Siamonds, Clubs
     private final char suit;
     
+    public boolean isBlind;
+    
     public Card(String value, char suit){
         this.suit = suit;
         this.value = value;

@@ -15,5 +15,12 @@ public class CardHolder extends JPanel {
     public CardHolder(){
         
     }
+    public void addCard(CardImage cardImage){
+        this.add(cardImage);
+        
+    }
     
+    public void clear(){
+        this.removeAll();
+    }
 }
